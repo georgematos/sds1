@@ -33,12 +33,12 @@ public class RecordResource {
 
   @GetMapping
   public ResponseEntity<Page<RecordDTO>> findAll(
+    @RequestParam(value = "min", defaultValue = "") String min,
+    @RequestParam(value = "max", defaultValue = "") String max,
     @RequestParam(value = "page", defaultValue = "0") Integer page,
     @RequestParam(value = "linesPerPage", defaultValue = "0") Integer linesPerPage,
     @RequestParam(value = "orderBy", defaultValue = "moment") String orderBy,
-    @RequestParam(value = "direction", defaultValue = "DESC") String direction,
-    @RequestParam(value = "min", defaultValue = "") String min,
-    @RequestParam(value = "max", defaultValue = "") String max
+    @RequestParam(value = "direction", defaultValue = "DESC") String direction
   ) {
     
     Instant minDate = "".equals(min) ? null : Instant.parse(min); // se a string não vier vazia faz o parse para Instant
