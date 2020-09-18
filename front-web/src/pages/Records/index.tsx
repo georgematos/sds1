@@ -6,7 +6,7 @@ import Pagination from './pagination/index';
 import './styles.css';
 import { RecordResponse } from './types';
 
-const BASE_URL = 'http://localhost:8080';
+const BASE_URL = 'https://sds1-georgematos.herokuapp.com';
 
 const Records = () => {
 

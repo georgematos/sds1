@@ -6,7 +6,7 @@ import { barOptions, pieOptions } from './chart-options';
 import axios from 'axios';
 import { buildBarSeries, getPlatformChartData, getGenderChartData } from './helpers';
 
-const BASE_URL = 'http://localhost:8080';
+const BASE_URL = 'https://sds1-georgematos.herokuapp.com';
 
 type PieChartData = {
   labels: string[];
